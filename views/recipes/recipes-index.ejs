@@ -1,0 +1,28 @@
+<% include ../partials/boilerplate %>
+<header>
+    <h1>Recipes</h1>
+    <nav>
+        <li><a href='/'>Home</a></li>
+        <li><a class='current' href='/todos'>Recipes</a></li>
+        <li><a href='/todos/add'>Add</a></li>
+    </nav>
+</header>
+<hr>
+<h1><span>Recipes</span></h1>
+<div class='frame'>
+    <% recipesData.forEach(function(recipe) { %>
+        <div class='photo'>
+            <h3><%= recipe.title %></h3>
+            <span>Author: <%= recipe.author %></span></br>
+            <span>Category: <%= recipe.cetegory_type %></span></br>
+            <span>Description: <%= recipe.description %></span>
+            <a href='/recipes/<%= recipe.id %>'>Info</a>
+            <a href='/recipes/edit/<%= recipe.id %>'>Edit</a>
+            <form method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
+                <input type='submit' class='button' value='Delete' />
+            </form>
+        </div>
+    <% }) %>
+</div>
+    <a class='button' href='/recipes/add'>Add a new recipe</a>
+    <hr>
