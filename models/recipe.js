@@ -1,5 +1,5 @@
 // importing the pg-promise
-const db = require('../bd/config');
+const db = require('../db/config');
 
 // creating a model object
 const Recipe = {};
