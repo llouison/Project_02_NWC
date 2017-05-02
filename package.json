@@ -1,0 +1,19 @@
+{
+  "name": "project_02_nwc",
+  "version": "1.0.0",
+  "description": "a recipe crud app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llouison/Project_02_NWC.git"
+  },
+  "author": "Lisa Louison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/llouison/Project_02_NWC/issues"
+  },
+  "homepage": "https://github.com/llouison/Project_02_NWC#readme"
+}
