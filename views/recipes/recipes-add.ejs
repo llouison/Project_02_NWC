@@ -1,0 +1,20 @@
+<% include ../partials/boilerplate %>
+<header>
+    <h1>NWC</h1>
+    <nav>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/recipes'>Recipes</a></li>
+        <li><a class='current' href='/recipes/add'>Add</a></li>
+    </nav>
+</header>
+<hr>
+<h1><span>New Recipe</span></h1>
+<div class='photo'>
+  <form method='POST' action='/recipes'>
+    <input name='title' type='text' class='form' placeholder='title' />
+    <input name='author' type='text' class='form' placeholder='author' />
+    <input name='category_type' type='text' class='form' placeholder='category' />
+    <textarea name='description' class='form' placeholder='Give a description here...'></textarea>
+    <input type='submit' class='button' value='Create Recipe' />
+  </form>
+</div>
