@@ -11,5 +11,5 @@ CREATE TABLE IF NOT EXISTS recipes (
     title VARCHAR(255),
     author VARCHAR(255),
     description VARCHAR(1028),
-    category_id INTEGER REFERENCES categories(id)
+    category_type INTEGER REFERENCES categories(id)
 );
