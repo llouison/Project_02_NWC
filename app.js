@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // directing express to static files
-app.use('/staic', express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 // setting uo the morgan logger function to run on dev script
 app.use(logger('dev'));
 // setting uo the body parser function to run on json info
