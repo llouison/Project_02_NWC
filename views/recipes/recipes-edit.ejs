@@ -13,7 +13,7 @@
 <form method='POST' action='/recipes/<%= id %>?_method=PUT'>
   <input name='title' class='form' type='text' value='<%= recipe.title %>' />
   <input name='author' class='form' type='text' value='<%= recipe.author %>' />
-  <input name='category' class='form' type='text' value='<%= recipe.category_type %>' />
+  <input name='category_type' class='form' type='text' value='<%= recipe.category_type %>' />
   <textarea name='description' class='form'><%= recipe.description %></textarea>
   <input type='submit' class='button' value='Update' />
 </form>
