@@ -28,7 +28,7 @@ Recipe.create = recipe => {
 
 // creating the update recipe method
 Recipe.update = (recipe, id) => {
-    return db.one(
+    return db.none(
         `
         UPDATE recipes SET
         title = $1,

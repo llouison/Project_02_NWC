@@ -41,6 +41,9 @@ controller.create = (req, res) => {
         category_type: req.body.category_type,
     })
     .then(recipe => {
+        res.redirect('/recipes');
+    })
+    .catch(err => {
         res.status(400).json(err);
     });
 };
@@ -50,8 +53,8 @@ controller.edit = (req, res) => {
     Recipe.findById(req.params.id)
     .then(recipe => {
         console.log(recipe);
-        res.redner('recipes/recipes-edit', {
-            documentTitle: `Now We're Cookin' - edit ${id}`,
+        res.render('recipes/recipes-edit', {
+            documentTitle: 'Now We\'re Cookin\' - Edit',
             recipe: recipe,
             id: req.params.id,
         });
@@ -63,13 +66,17 @@ controller.edit = (req, res) => {
 
 // defining the view to render once the update recipe promise is complete
 controller.update = (req, res) => {
-    Recipe.update({
+    Recipe.update(
+    {
         title: req.body.title,
         author: req.body.author,
         description: req.body.description,
         category_type: req.body.category_type,
     }, req.params.id)
     .then(recipe => {
+        res.redirect('/recipes');
+    })
+    .catch(err => {
         res.status(400).json(err);
     });
 };
