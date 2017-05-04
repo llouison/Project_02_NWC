@@ -1,17 +1,16 @@
 <% include ./partials/boilerplate.ejs %>
 <header>
-<p>NWC</p>
-<nav>
+    <h1 class='title'></h1>
+    <nav>
         <li><a class='current' href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
         <li><a href='/recipes/add'>Add</a></li>
-</nav>
+    </nav>
 </header>
-<div class='photo'>
-    <div class='photo_inner'>
-        <h1 class='title'><%= message %></h1>
-        <h2><%= subTitle %></h1>
-        <a href='/recipes'>View all recipes</a>
-        <a href='/recipes/add'>Create a new recipe</a>
-    </div>
+<div class='container'>
+    <h1 class='title'><%= message %></h1>
+    <p><%= subTitle %></p>
+    <a class='button' href='/recipes'>View all recipes</a>
+    <a class='button' href='/recipes/add'>Create a new recipe</a>
 </div>
+<% include ./partials/end %>
