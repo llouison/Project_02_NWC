@@ -13,7 +13,7 @@ const recipesRoutes = require('./routes/recipesRoutes');
 
 // setting up port for express to listen to for activity
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, function() {
+app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
 });
 
@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
 // setting up the route to the index page
-app.get('/', function(req, res){
+app.get('/',(req, res) => {
     res.render('index', {
         documentTitle: 'Now We\'re Cookin\'',
         subTitle: 'A collection of our favorite foods and how to make em\'',
@@ -45,6 +45,6 @@ app.get('/', function(req, res){
 app.use('/recipes', recipesRoutes);
 
 // handling 404 errors
-app.get('*', function(req, res){
+app.get('*', (req, res) => {
     res.status(404).send({message: 'Spaghetti-oh-no!'});
 });
