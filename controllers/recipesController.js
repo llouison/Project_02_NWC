@@ -23,7 +23,7 @@ controller.show = (req, res) => {
     Recipe.findById(req.params.id)
     .then(recipe => {
         res.render('recipes/recipes-single', {
-            documentTitle: `Now We're Cookin' - ${id}`,
+            documentTitle: `Now We're Cookin'`,
             recipe: recipe,
         });
     })
