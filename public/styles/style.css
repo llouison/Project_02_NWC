@@ -36,6 +36,11 @@ h1 {
     font-size: 60px;
     text-align: center;
 }
+.index_title {
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #fff;
+    margin: 30px;
+}
 .title {
     font-family: 'Love Ya Like A Sister', cursive;
     color: #fff;
@@ -101,6 +106,9 @@ nav a:hover {
 .current {
     color: #f4f4f4;
     border-bottom:dotted;
+}
+.index_img {
+    width: 50%;
 }
 .container {
     width: 70vw;

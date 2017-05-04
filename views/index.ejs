@@ -8,9 +8,12 @@
     </nav>
 </header>
 <div class='container'>
-    <h1 class='title'><%= message %></h1>
+    <h1 class='index_title'><%= message %></h1>
+    <img class='index_img' src='../static/images/silverware.png'>
     <p><%= subTitle %></p>
-    <a class='button' href='/recipes'>View all recipes</a>
-    <a class='button' href='/recipes/add'>Create a new recipe</a>
+    <div class='button_container'>
+        <a class='button' href='/recipes'>View all recipes</a>
+        <a class='button' href='/recipes/add'>Create a new recipe</a>
+    </div>
 </div>
 <% include ./partials/end %>
