@@ -19,6 +19,10 @@
     </div>
     <div class='description'>
         <p><span class='title'>Category: </span><%= recipe.cetegory_type %></p>
+        <span class='title'>Ingredients: </span>
+        <% recipe.ingredients.forEach(function(ingredient) { %>
+        <p class='ingredient'><%= ingredient %></p>
+         <% }) %>
         <p><span class='title'>Description: </span><%= recipe.description %></p>
         <div class='button_container'>
             <a class='button' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
