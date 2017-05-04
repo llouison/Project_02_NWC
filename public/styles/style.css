@@ -1,19 +1,19 @@
 body {
+    min-width: 100vw;
+    min-height: 100vh;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    color: #fff;
+    line-height: 1.4em;
+    color: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 100vw;
-    min-height: 100vh;
-    line-height: 1.4em;
-    background: url('../images/bg.png');
+    background: #222 url('../images/bg.png');
     background-attachment: fixed;
 }
 header {
-    width: 70vw;
+    width: 90vw;
     margin-top: 15px;
     display: flex;
     flex-direction: row; 
@@ -33,26 +33,18 @@ li{
     font-size: 20px;
 }
 h1 {
-    font-family: 'Indie Flower', cursive;
     font-size: 60px;
-    color: #EA3324;
     text-align: center;
-    font-weight: bold;
-    padding-bottom: 3px;
-    margin-bottom: 17px; 
 }
 .title {
     font-family: 'Love Ya Like A Sister', cursive;
     color: #fff;
 }
-.check {
-    font-size:45px;
-    padding: 10px;
-    border-bottom: none;
-}
-h1 span {
-    background: #fff;
-    padding: 0 10px;
+.recipe_title {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    color: #000;
+    padding: 20px;
 }
 hr {
     width: 70vw;
@@ -63,9 +55,9 @@ hr {
     z-index: -1;  
 }
 h2 {
-    padding: 10px;
+    padding-bottom: 12px;
     text-align: center;
-    font-weight: bold;
+    color: #000;
 }
 h3 {
     font-family: 'Indie Flower', cursive;
@@ -94,6 +86,9 @@ a {
 a:hover {
     color: #EA3324;
 }
+.back {
+    display: block;
+}
 nav a:hover {
     border-bottom:dotted;
 }
@@ -101,54 +96,54 @@ nav a:hover {
     color: #EA3324;
     border-bottom:dotted;
 }
-.frame {
+.container {
     width: 70vw;
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    text-align: center;
+    justify-content: center;
 }
-.photo {
-    max-width: 50vw;
-    background: #fff;
-    padding: 40px;
-    border-radius: 6px/18px 0;
-    margin: 20px 10px;
-    box-shadow: 0px 4px 5px rgba(0,0,0,0.5); 
+.polaroid {
+    max-width: 50vh;
+    max-height: 60vh;
+    background: #f5f5f5;
+    padding: 40px 40px 10px;
+    margin: 20px auto;
+    box-shadow: 3px 2px 7px 2px rgba(0,0,0,0.85);
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    transform: rotate(2deg);  
+    transform: rotate(5deg);  
 }
-.photo::before {
-	content: ""; 
-    width: 130px;
-	height: 28px;
-    border-radius: 6px/18px 0;
-	background: rgba(227, 200, 114, 0.40);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    position: relative;
-    bottom: 55px;
+.single {
+    margin: 40px;
+    box-sizing: border-box;
 }
-.photo:nth-child(2n+0) {
-    transform: rotate(-1deg);
+.polaroid:nth-child(2n+0) {
+    transform: rotate(-5deg);
 }
-.photo:nth-child(3n+0) {
-    transform: rotate(1deg);
+.polaroid_photo {
+    height: 45vh;
+    background: #1E1C18;
 }
-.photo:nth-child(4n+0) {
-    transform: rotate(-2deg);
+.polaroid_photo img {
+    width: 100%;
+    height: 100%;
 }
-.photo_inner {
-    background: #000;
+.polaroid_title {
+    flex: 1;
 }
-form {
+.description {
+    width: 50%;
+}
+/*form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+}*/
 .form {
     font-size: 1em;
     padding: 15px;
@@ -163,19 +158,28 @@ form {
     border-bottom: 3px solid #EA3324;
     transition: 0.5s all;
 }
+.single_form {
+    display: inline-block;
+}
+.button_container {
+    text-align: center;
+}
 .button {
     font-size: 1em;
-    color: #fff;
+    color: #f5f5f5;
     padding: 10px;
-    border: none;
+    border: 1px dashed #f5f5f5;
     border-radius: 10px;
+    background: transparent;
     margin: 20px;
-    background-color: #EA3324;
     transition: all 0.4s ease;
     cursor: pointer;   
 }
 .button:hover {
-    background-color: #d12112;
+    color: #000;
+    background-color: #f5f5f5;
+    border: none;
+    box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75);
 }
 
 /*###### Mobile Media Query ######*/
@@ -205,11 +209,14 @@ form {
   h3 {
     line-height: 30px;
   }
-  .check {
-    font-size: 35px;
-    margin-bottom: 0;
-  }
   .frame{
     flex-direction: column;
   }
+  .polaroid {
+    max-width: 40vw;
+    max-height: 50vw;
+  }
+  .polaroid_photo {
+    height: 30vw;
+}
 }

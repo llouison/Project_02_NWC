@@ -1,21 +1,32 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h1>NWC</h1>
+    <h1 class='title'>Now We're Cookin'</h1>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
         <li><a href='/recipes/add'>Add</a></li>
     </nav>
 </header>
-    <div class='photo'>
-        <h3><%= recipe.title %></h3>
-        <span>Author: <%= recipe.author %></span>
-        <span>Category: <%= recipe.cetegory_type %></span></br>
-        <span>Description: <%= recipe.description %></span>
-    
-        <a href='/recipes/edit/<%= recipe.id %>'>Edit</a>
-        <form method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
-            <input type='submit' class='button' value='Delete' />
-        </form>
-        <a href='/todos'>Return to list</a>
+<div class='container'>
+    <div class='polaroid single'>
+        <div class='polaroid_photo'>
+            <img src='../static/images/shrimp_scampi.jpg'>
+        </div>
+        <div class='polaroid_title'>
+            <h1 class='recipe_title'><%= recipe.title %></h1>
+            <h2>By: <%= recipe.author %></h2>
+        </div>
     </div>
+    <div class='description'>
+        <p><span class='title'>Category: </span><%= recipe.cetegory_type %></p>
+        <p><span class='title'>Description: </span><%= recipe.description %></p>
+        <div class='button_container'>
+            <a class='button' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
+            <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
+                <input type='submit' class='button' value='Delete' />
+            </form>
+        </div>
+        <a class='back' href='/recipes'>&larr; Return to recipe list</a>
+    </div>
+</div>
+   
