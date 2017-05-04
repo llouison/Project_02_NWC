@@ -76,15 +76,6 @@ hr {
     border: 1px solid #f4f4f4;
     margin: 15px 0; 
 }
-/*.index_description {
-    color: #000;
-    position: relative;
-    bottom: 175px;
-    visibility: hidden;
-}
-.index_description:hover {
-    visibility: visible;
-}*/
 
 /* ###### Links ###### */
 
@@ -275,11 +266,29 @@ footer a {
 }
 /*###### Mobile Media Query ######*/
 @media screen and (max-width: 600px) {
+.nav {
+    text-align: center;
+}
+h2 {
+    display: none;
+}
+.single {
+    margin: 20px;
+}
+.index {
+    filter: none;
+}
 .polaroid_photo {
     border: 10px solid #f4f4f4;
 }
 .recipe_title {
     font-size: 18px;
+}
+.secondary {
+    padding-top: 0;
+}
+.black {
+    padding: 2px 5px;
 }
 
 }

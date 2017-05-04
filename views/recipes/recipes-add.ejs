@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h1 class='nav title'>Now We're Cookin'</h1>
+    <h3 class='nav title'>Now We're Cookin'</h3>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
@@ -8,18 +8,18 @@
     </nav>
 </header>
 <div class='container'>
-    <h1 class='title'>New Recipe</h1>
-    <hr>
+  <h1 class='title'>New Recipe</h1>
+  <hr>
   <div class='polaroid single'>
-        <div class='polaroid_photo'>
-            <img src='../static/images/shrimp_scampi.jpg'>
-        </div>
+    <div class='polaroid_photo'>
+      <img src='../static/images/shrimp_scampi.jpg' alt='recipe photo'>
     </div>
+  </div>
   <form class='input_form' method='POST' action='/recipes'>
-    <input name='title' type='text' class='form' placeholder='title' />
-    <input name='author' type='text' class='form' placeholder='author' />
-    <input name='category_type' type='text' class='form' placeholder='category' />
-    <textarea name='description' class='form' placeholder='Give a description here...'></textarea>
+    <label for='title'>Title<input name='title' id='title' type='text' class='form'/></label>
+    <label for='author'>Author<input name='author' id='author' type='text' class='form'/></label>
+    <label for='category_type'>Category<input name='category_type' id='category_type' type='text' class='form'/></label>
+    <label for='description'>Description<textarea name='description' id='description' class='form' placeholder='Tell us about your recipe here...'></textarea></label>
     <input type='submit' class='button' value='Create Recipe' />
   </form>
 </div>
