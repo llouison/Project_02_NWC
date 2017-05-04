@@ -16,7 +16,7 @@ body {
 /* ###### Navigation ###### */
 
 header {
-    width: 90vw;
+    width: 70vw;
     margin-top: 15px;
     display: flex;
     flex-direction: row; 
@@ -26,10 +26,14 @@ header {
     font-size: 20px;
     list-style: none;
 }
+.nav {
+    flex: 2;
+    text-align: left;
+}
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    text-align: right;
 }
 .current, nav a:hover {
     color: #f4f4f4;
@@ -101,7 +105,7 @@ a:hover {
 /* ###### Polaroid Container ###### */
 
 .container {
-    width: 70vw;
+    width: 90vw;
     margin: 40px 0;
     display: flex;
     flex-direction: column;
@@ -110,10 +114,9 @@ a:hover {
     justify-content: center;
 }
 .polaroid {
-    max-width: 50vh;
-    max-height: 60vh;
+    width: 50vh;
+    height: 60vh;
     background: #f5f5f5;
-    padding: 40px 40px 10px;
     margin: 20px auto;
     box-shadow: 3px 2px 7px 2px rgba(0,0,0,0.85);
     display: flex;
@@ -140,11 +143,13 @@ a:hover {
 .polaroid:nth-child(3n+0) {
     transform: rotate(1deg);
 }
-.polaroid_title {
+.polaroid_content {
     flex: 1;
+    height: 20vh;
+    width: 50vh;
 }
 .description {
-    width: 50%;
+    width: 40%;
 }
 
 /* ###### Images ###### */
@@ -152,8 +157,11 @@ a:hover {
     width: 50%;
 }
 .polaroid_photo {
+    width: 50vh;
     height: 45vh;
-    background: #1E1C18;
+    border: 20px solid #f4f4f4;
+    box-sizing: border-box;
+    align-self: flex-start;
 }
 .polaroid_photo img {
     width: 100%;
@@ -161,7 +169,9 @@ a:hover {
 }
 
 /* ###### Form ###### */
-
+label {
+    color: #818181;
+}
 .input_form {
     display: flex;
     flex-direction: column;
@@ -223,7 +233,7 @@ footer a {
     text-decoration: underline;
 }
 
-/*###### Mobile Media Query ######*/
+/*###### Tablet Media Query ######*/
 @media screen and (max-width: 1000px) {
   body {
     font-size: 12px;
@@ -236,7 +246,7 @@ footer a {
     flex-direction: column;
     justify-content: center;
   }
-  header h1 {
+  h1 {
     font-size: 20px;
   }
   li {
@@ -244,20 +254,32 @@ footer a {
     text-align: center;
     padding: 5px;
   }
-  h1, h3, h4 {
+  h3, h4 {
     font-size: 18px;
   }
   h3 {
     line-height: 30px;
   }
-  .frame{
-    flex-direction: column;
-  }
   .polaroid {
-    max-width: 40vw;
-    max-height: 50vw;
+    width: 40vw;
+    height: 50vw;
   }
   .polaroid_photo {
-    height: 30vw;
+    width: 40vw;
+    height: 35vw;
+  }
+  .polaroid_content {
+    height: 15vw;
+    width: 40vw;
+  }
 }
+/*###### Mobile Media Query ######*/
+@media screen and (max-width: 600px) {
+.polaroid_photo {
+    border: 10px solid #f4f4f4;
+}
+.recipe_title {
+    font-size: 18px;
+}
+
 }

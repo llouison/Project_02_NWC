@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h1 class='nav title'>Now We're Cookin'</h1>
+    <h3 class='nav title'>Now We're Cookin'</h3>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
@@ -12,15 +12,15 @@
     <hr>
     <div class='polaroid single'>
         <div class='polaroid_photo'>
-            <img src='../static/images/shrimp_scampi.jpg'>
+            <img src='../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
         </div>
     </div>
-<form class='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
-  <input name='title' class='form' type='text' value='<%= recipe.title %>' />
-  <input name='author' class='form' type='text' value='<%= recipe.author %>' />
-  <input name='category_type' class='form' type='text' value='<%= recipe.category_type %>' />
-  <textarea name='description' class='form'><%= recipe.description %></textarea>
-  <input type='submit' class='button' value='Update' />
+    <form class='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
+        <label for="title">Title<input name='title' class='form' id='title' type='text' value='<%= recipe.title %>' /></label>
+        <label for="author">Author<input name='author' class='form' id='author' type='text' value='<%= recipe.author %>' /></label>
+        <label for="category">Category<input name='category_type' class='form' id='category' type='text' value='<%= recipe.category_type %>' /></label>
+        <label for="description">Description<textarea name='description' id='description' class='form'><%= recipe.description %></textarea></label>
+        <input type='submit' class='button' value='Update' />
 </form>
 </div>
 <% include ../partials/end %>

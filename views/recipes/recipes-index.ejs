@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h1 class='nav title'>Now We're Cookin'</h1>
+    <h3 class='nav title'>Now We're Cookin'</h3>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a class='current' href='/recipes'>Recipes</a></li>
@@ -14,17 +14,18 @@
     <% recipesData.forEach(function(recipe) { %>
         <div class='polaroid single index'>
             <div class='polaroid_photo'>
-                <img src='../static/images/shrimp_scampi.jpg'>
-                <p class='index_description'>Description: <%= recipe.description %></p>
+                <img src='../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
             </div>
-            <h1 class='secondary recipe_title'><%= recipe.title %></h1>
-            <h2>Category: <%= recipe.cetegory_type %></h2>
-            <div class='button_container'>
-                <a class='button black' href='/recipes/<%= recipe.id %>'>Info</a>
-                <a class='button black' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
-                <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
-                    <input type='submit' class='button black' value='Delete' />
-                </form>
+            <div class='polaroid_content'>
+                <h1 class='secondary recipe_title'><%= recipe.title %></h1>
+                <h2>Category: <%= recipe.cetegory_type %></h2>
+                <div class='button_container'>
+                    <a class='button black' href='/recipes/<%= recipe.id %>'>Info</a>
+                    <a class='button black' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
+                    <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
+                        <input type='submit' class='button black' value='Delete' />
+                    </form>
+                </div>
             </div>
         </div>
     <% }) %>

@@ -1,6 +1,6 @@
 <% include ./partials/boilerplate.ejs %>
 <header>
-    <h1 class='nav title'></h1>
+    <h3 class='nav title'>Now We're Cookin'</h3>
     <nav>
         <li><a class='current' href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
@@ -9,8 +9,8 @@
 </header>
 <div class='container'>
     <h1 class='primary title'><%= message %></h1>
-    <img class='index_img' src='../static/images/silverware.png'>
-    <p class='main'><%= subTitle %></p>
+    <img class='index_img' src='../static/images/silverware.png' alt='cutlery chalk drawing'>
+    <h2 class='primary'><%= subTitle %></h2>
     <div class='button_container'>
         <a class='button' href='/recipes'>View all recipes</a>
         <a class='button' href='/recipes/add'>Create a new recipe</a>
