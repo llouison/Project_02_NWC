@@ -1,10 +1,11 @@
 -- inserting values into the recipes table
-INSERT INTO recipes (title, author, description, category_type) VALUES
+INSERT INTO recipes (title, author, description, category_type, ingredients) VALUES
     (
         'Shrimp Scampi', 
         'Ren Stevens', 
         'Simply sauté the shrimp with garlic in butter and olive oil, splash it with some white wine, let the wine reduce while the shrimp cooks, and then toss it with fresh parsley, lemon juice and black pepper.',
-        1
+        1, 
+        '{"1 cup butter", "2 tablespoons prepared Dijon mustard"}'
     ),
     (
         'Meatloaf', 
