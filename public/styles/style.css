@@ -124,7 +124,10 @@ nav a:hover {
     box-sizing: border-box;
 }
 .polaroid:nth-child(2n+0) {
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
+}
+.polaroid:nth-child(3n+0) {
+    transform: rotate(1deg);
 }
 .polaroid_photo {
     height: 45vh;
