@@ -269,8 +269,11 @@ footer a {
 .nav {
     text-align: center;
 }
-h2 {
+.tertiary {
     display: none;
+}
+.container {
+    margin: 20px;
 }
 .single {
     margin: 20px;
@@ -286,6 +289,12 @@ h2 {
 }
 .secondary {
     padding-top: 0;
+}
+.individ {
+    padding: 0 5px 8px;
+}
+.description {
+    width: 60%;
 }
 .black {
     padding: 2px 5px;
