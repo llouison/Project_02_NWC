@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h1 class='title'>Now We're Cookin'</h1>
+    <h1 class='nav title'>Now We're Cookin'</h1>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a class='current' href='/recipes'>Recipes</a></li>
@@ -17,7 +17,7 @@
                 <img src='../static/images/shrimp_scampi.jpg'>
                 <p class='index_description'>Description: <%= recipe.description %></p>
             </div>
-            <h1 class='index_recipe_title'><%= recipe.title %></h1>
+            <h1 class='secondary recipe_title'><%= recipe.title %></h1>
             <h2>Category: <%= recipe.cetegory_type %></h2>
             <div class='button_container'>
                 <a class='button black' href='/recipes/<%= recipe.id %>'>Info</a>
