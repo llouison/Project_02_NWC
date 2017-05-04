@@ -48,7 +48,19 @@ Users should be able to:
 
 ## Major Coding Win
 ```js
+//created a migration that added an ingredients column to my recipe table that used the array datatype
+ALTER TABLE recipes 
+ADD COLUMN ingredients text[];
 
+//learned how to insert arrays into SQL
+UPDATE recipes
+SET ingredients = '{"1 cup butter", "1 tablespoon chopped garlic"}'
+WHERE id = 5;
+
+//figured out how to display each individual ingredient by using .forEach in ejs
+<% recipe.ingredients.forEach(function(ingredient) { %>
+    <p class='ingredient'><%= ingredient %></p>
+<% }) %>
 ```
 
 ## How-to-use/Download and Installation Instructions
