@@ -14,6 +14,9 @@
         <div class='polaroid_photo'>
             <img src='../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
         </div>
+        <div class='polaroid_content'>
+            <h2>Your Photo Here</h2>
+        </div>
     </div>
     <form class='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
         <label for="title">Title<input name='title' class='form' id='title' type='text' value='<%= recipe.title %>' /></label>

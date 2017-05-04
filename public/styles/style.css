@@ -151,6 +151,7 @@ a:hover {
     width: 50vh;
     height: 45vh;
     border: 20px solid #f4f4f4;
+    background: #222;
     box-sizing: border-box;
     align-self: flex-start;
 }
