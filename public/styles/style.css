@@ -46,13 +46,16 @@ h1 {
     color: #000;
     padding: 20px;
 }
+.index_recipe_title {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 30px;
+    color: #000;
+    padding: 5px;
+}
 hr {
     width: 70vw;
-    border: 1px solid #EA3324;
-    margin: 15px 0;
-    position: relative;
-    top: 25px;
-    z-index: -1;  
+    border: 1px solid #f4f4f4;
+    margin: 15px 0; 
 }
 h2 {
     padding-bottom: 12px;
@@ -76,6 +79,15 @@ h4 {
 }
 p {
     margin: 1em 0;
+}
+.index_description {
+    color: #000;
+    position: relative;
+    bottom: 175px;
+    visibility: hidden;
+}
+.index_description:hover {
+    visibility: visible;
 }
 a {
     color: #818181;
@@ -122,6 +134,13 @@ nav a:hover {
 .single {
     margin: 40px;
     box-sizing: border-box;
+}
+.index {
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+.index:hover {
+    filter: none;
 }
 .polaroid:nth-child(2n+0) {
     transform: rotate(-2deg);
@@ -184,6 +203,13 @@ nav a:hover {
     background-color: #f5f5f5;
     border: none;
     box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75);
+}
+.black {
+    color: #000;
+    padding: 2px 8px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    margin: 0 5px;
 }
 footer p {
     color: #818181;

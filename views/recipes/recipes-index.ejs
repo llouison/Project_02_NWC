@@ -7,23 +7,25 @@
         <li><a href='/recipes/add'>Add</a></li>
     </nav>
 </header>
-<hr>
-<h1 class='title'>Recipes</h1>
+
 <div class='container'>
+    <h1 class='title'>Recipes</h1>
+    <hr>
     <% recipesData.forEach(function(recipe) { %>
-        <div class='polaroid'>
+        <div class='polaroid single index'>
             <div class='polaroid_photo'>
                 <img src='../static/images/shrimp_scampi.jpg'>
-                <p><span class='title'>Description: </span><%= recipe.description %></p>
+                <p class='index_description'>Description: <%= recipe.description %></p>
             </div>
-            <h1 class='recipe_title'><%= recipe.title %></h1>
-            <h2>By: <%= recipe.author %></h2>
+            <h1 class='index_recipe_title'><%= recipe.title %></h1>
             <h2>Category: <%= recipe.cetegory_type %></h2>
-            <a href='/recipes/<%= recipe.id %>'>Info</a>
-            <a href='/recipes/edit/<%= recipe.id %>'>Edit</a>
-            <form method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
-                <input type='submit' class='button' value='Delete' />
-            </form>
+            <div class='button_container'>
+                <a class='button black' href='/recipes/<%= recipe.id %>'>Info</a>
+                <a class='button black' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
+                <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
+                    <input type='submit' class='button black' value='Delete' />
+                </form>
+            </div>
         </div>
     <% }) %>
 </div>
