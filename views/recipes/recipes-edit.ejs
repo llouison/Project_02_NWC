@@ -1,16 +1,21 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h1>NWC</h1>
+    <h1 class='title'>Now We're Cookin'</h1>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
         <li><a href='/recipes/add'>Add</a></li>
     </nav>
 </header>
-<hr>
-<h1><span>Edit Recipe</span></h1>
-<div class='photo'>
-<form method='POST' action='/recipes/<%= id %>?_method=PUT'>
+<div class='container'>
+    <h1 class='title'>Edit Recipe</h1>
+    <hr>
+    <div class='polaroid single'>
+        <div class='polaroid_photo'>
+            <img src='../static/images/shrimp_scampi.jpg'>
+        </div>
+    </div>
+<form class='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
   <input name='title' class='form' type='text' value='<%= recipe.title %>' />
   <input name='author' class='form' type='text' value='<%= recipe.author %>' />
   <input name='category_type' class='form' type='text' value='<%= recipe.category_type %>' />
@@ -18,3 +23,4 @@
   <input type='submit' class='button' value='Update' />
 </form>
 </div>
+<% include ../partials/end %>

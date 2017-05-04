@@ -71,12 +71,6 @@ h3 {
     padding-bottom: 12px;
     word-wrap: break-word;
 }
-h4 {
-    font-size: 30px;
-    color: #EA3324;
-    font-weight: bold;
-    padding-bottom: 20px;
-}
 p {
     margin: 1em 0;
 }
@@ -162,13 +156,14 @@ nav a:hover {
 .description {
     width: 50%;
 }
-/*form {
+.input_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}*/
+}
 .form {
     font-size: 1em;
+    color: #f5f5f5;
     padding: 15px;
     border: none;
     border-bottom: 3px solid grey;
@@ -178,7 +173,7 @@ nav a:hover {
 }
 .form:focus {
     outline: none;
-    border-bottom: 3px solid #EA3324;
+    border-bottom: 3px solid #f5f5f5;
     transition: 0.5s all;
 }
 .single_form {
