@@ -22,6 +22,7 @@ controller.index = (req, res) => {
 controller.show = (req, res) => {
     Recipe.findById(req.params.id)
     .then(recipe => {
+        console.log(recipe.ingredients);
         res.render('recipes/recipes-single', {
             documentTitle: `Now We're Cookin'`,
             recipe: recipe,
@@ -39,6 +40,7 @@ controller.create = (req, res) => {
         author: req.body.author,
         description: req.body.description,
         category_type: req.body.category_type,
+        ingredients: req.body.ingredients,
     })
     .then(recipe => {
         res.redirect('/recipes');
