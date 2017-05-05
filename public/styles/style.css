@@ -226,6 +226,8 @@ footer a {
 }
 
 /*###### Tablet Media Query ######*/
+/*################################*/
+
 @media screen and (max-width: 1000px) {
   body {
     font-size: 12px;
@@ -238,6 +240,7 @@ footer a {
     flex-direction: column;
     justify-content: center;
   }
+  /* ####### Text ###### */
   h1 {
     font-size: 20px;
   }
@@ -252,6 +255,7 @@ footer a {
   h3 {
     line-height: 30px;
   }
+/* ###### Polaroid Container ###### */
   .polaroid {
     width: 40vw;
     height: 50vw;
@@ -273,6 +277,7 @@ footer a {
 .tertiary {
     display: none;
 }
+/* ###### Polaroid Container ###### */
 .container {
     margin: 20px;
 }  
@@ -293,6 +298,7 @@ footer a {
 .index {
     filter: none;
 }
+/* ###### Text ###### */
 .recipe_title {
     font-size: 18px;
 }
