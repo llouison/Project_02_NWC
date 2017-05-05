@@ -22,8 +22,15 @@
     <label for='title'>Title<input name='title' id='title' type='text' class='form'/></label>
     <label for='author'>Author<input name='author' id='author' type='text' class='form'/></label>
     <label for='category_type'>Category<input name='category_type' id='category_type' type='text' class='form'/></label>
+    <label for="ingredients">Ingredients</br>
+        <section id='ingredientlist'>
+        <input name='ingredients' class='form' id='ingredients' type='text'/>
+        </section>
+    </label> 
+    <button type="button" class='add_ingredient'>Add Ingredient</button>
     <label for='description'>Description<textarea name='description' id='description' class='form' placeholder='Tell us about your recipe here...'></textarea></label>
     <input type='submit' class='button' value='Create Recipe' />
   </form>
 </div>
+<script src='../../static/js/main.js'></script>
 <% include ../partials/end %>
