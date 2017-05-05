@@ -22,8 +22,16 @@
         <label for="title">Title<input name='title' class='form' id='title' type='text' value='<%= recipe.title %>' /></label>
         <label for="author">Author<input name='author' class='form' id='author' type='text' value='<%= recipe.author %>' /></label>
         <label for="category">Category<input name='category_type' class='form' id='category' type='text' value='<%= recipe.category_type %>' /></label>
+        <label for="ingredients">Ingredients</br>
+        <section id='ingredientlist'>
+        <% recipe.ingredients.forEach(function(ingredient) { %>
+        <input name='ingredients' class='form' id='ingredients' type='text' value='<%= ingredient %>' />
+         <% }) %></label>
+         </section>
+        <button type="button" class='add_ingredient'>Add Ingredient</button>
         <label for="description">Description<textarea name='description' id='description' class='form'><%= recipe.description %></textarea></label>
         <input type='submit' class='button' value='Update' />
 </form>
 </div>
+<script src='../../static/js/main.js'></script>
 <% include ../partials/end %>
