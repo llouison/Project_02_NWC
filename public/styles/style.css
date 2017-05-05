@@ -275,15 +275,23 @@ footer a {
 }
 .container {
     margin: 20px;
-}
-.single {
+}  
+.polaroid {
+    width: 50vw;
+    height: 60vw;
     margin: 20px;
+}
+.polaroid_photo {
+    width: 50vw;
+    height: 45vw;
+    border: 10px solid #f4f4f4;
+}
+.polaroid_content {
+    height: 25vw;
+    width: 50vw;
 }
 .index {
     filter: none;
-}
-.polaroid_photo {
-    border: 10px solid #f4f4f4;
 }
 .recipe_title {
     font-size: 18px;
