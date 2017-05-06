@@ -106,4 +106,4 @@ The objective of the app is for users to easily be able to create, view, edit, a
 5. 
 
 ## Unsolved Problems/Next Steps
-- If there is a blank ingredient input, the sql array is incorrect and throws an error
+- If there is a blank ingredient input, the sql array is incorrect and throws an error. I tried to create an if statement to check for empty values but it gave more errors.
