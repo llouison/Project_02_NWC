@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h3 class='logo'>Now We're Cookin'</h3>
+    <h3 class='logo' id='top'>Now We're Cookin'</h3>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a class='current' href='/recipes'>Recipes</a></li>
@@ -30,6 +30,7 @@
         </div>
     <% }) %>
 </div>
-    <a class='button' href='/recipes/add'>Add a new recipe</a>
-    <hr>
+<a class='button' id='topButton' href='#top'>Back To Top</a>
+<a class='button' href='/recipes/add'>Add a new recipe</a>
+<hr>
 <% include ../partials/end %>
