@@ -251,11 +251,10 @@ textarea:focus {
     margin: 0 5px;
 }
 #topButton {
-    /*border-radius: 100%;*/
     position: fixed;
     right: 30px;
     bottom: 20px;
-
+    opacity: 0.5;
 }
 
 /* ###### Footer ###### */
