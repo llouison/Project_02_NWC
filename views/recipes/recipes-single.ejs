@@ -14,16 +14,16 @@
         </div>
         <div class='polaroid_content'>
             <h1 class='individ recipe_title'><%= recipe.title %></h1>
-            <h2>By: <%= recipe.author %></h2>
         </div>
     </div>
     <div class='description'>
-        <p><span class='title'>Category: </span><%= recipe.cetegory_type %></p>
+        <p><span class='author'>Author: </span><%= recipe.author %></p>
+        <p><span class='title'>Category: </span><%= recipe.category_type %></p>
         <span class='title'>Ingredients: </span>
         <% recipe.ingredients.forEach(function(ingredient) { %>
             <p><%= ingredient %></p>
         <% }) %>
-        <p><span class='title'>Description: </span><%= recipe.description %></p>
+        <p><span class='title'>Directions:</br> </span><%= recipe.description %></p>
         <div class='button_container'>
             <a class='button' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
             <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
