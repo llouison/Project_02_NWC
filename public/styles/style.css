@@ -164,6 +164,9 @@ a:hover {
 label {
     color: #818181;
 }
+#ingredients {
+    display: none;
+}
 .input_form {
     display: flex;
     flex-direction: column;
