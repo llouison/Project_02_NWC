@@ -212,6 +212,9 @@ textarea:focus {
     outline: none;
     border: 3px solid #f4f4f4;
 }
+.description_text {
+    text-align: justify;
+}
 #photo {
     color: #222;
 }
@@ -246,6 +249,13 @@ textarea:focus {
     border: 1px solid #222;
     border-radius: 6px;
     margin: 0 5px;
+}
+#topButton {
+    /*border-radius: 100%;*/
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+
 }
 
 /* ###### Footer ###### */

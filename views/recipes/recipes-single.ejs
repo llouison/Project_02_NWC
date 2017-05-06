@@ -23,7 +23,7 @@
         <% recipe.ingredients.forEach(function(ingredient) { %>
             <p><%= ingredient %></p>
         <% }) %>
-        <p><span class='title'>Directions:</br> </span><%= recipe.description %></p>
+        <p class='description_text'><span class='title'>Directions:</br> </span><%= recipe.description %></p>
         <div class='button_container'>
             <a class='button' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
             <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
