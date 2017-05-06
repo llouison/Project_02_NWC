@@ -19,10 +19,10 @@ Recipe.create = recipe => {
     return db.one(
         `
         INSERT INTO recipes
-        (title, author, description, category_type, ingredients)
-        VALUES ($1, $2, $3, $4, $5) RETURNING *
+        (title, author, description, category_type, ingredients, photo)
+        VALUES ($1, $2, $3, $4, $5, $6) RETURNING *
         `,
-        [recipe.title, recipe.author, recipe.description, recipe.category_type, recipe.ingredients]
+        [recipe.title, recipe.author, recipe.description, recipe.category_type, recipe.ingredients, recipe.photo]
     );
 };
 
@@ -35,10 +35,11 @@ Recipe.update = (recipe, id) => {
         author = $2,
         description = $3,
         category_type = $4,
-        ingredients = $5
-        WHERE id = $6
+        ingredients = $5,
+        photo = $6
+        WHERE id = $7
         `,
-        [recipe.title, recipe.author, recipe.description, recipe.category_type, recipe.ingredients, id]
+        [recipe.title, recipe.author, recipe.description, recipe.category_type, recipe.ingredients, recipe.photo, id]
     );
 };
 

@@ -22,7 +22,6 @@ controller.index = (req, res) => {
 controller.show = (req, res) => {
     Recipe.findById(req.params.id)
     .then(recipe => {
-        console.log(recipe.ingredients);
         res.render('recipes/recipes-single', {
             documentTitle: `Now We're Cookin'`,
             recipe: recipe,
@@ -41,6 +40,7 @@ controller.create = (req, res) => {
         description: req.body.description,
         category_type: req.body.category_type,
         ingredients: req.body.ingredients,
+        photo: req.body.photo,
     })
     .then(recipe => {
         res.redirect('/recipes');
@@ -54,7 +54,7 @@ controller.create = (req, res) => {
 controller.edit = (req, res) => {
     Recipe.findById(req.params.id)
     .then(recipe => {
-        console.log(recipe);
+        console.log(recipe.photo);
         res.render('recipes/recipes-edit', {
             documentTitle: 'Now We\'re Cookin\' - Edit',
             recipe: recipe,
@@ -75,6 +75,7 @@ controller.update = (req, res) => {
         description: req.body.description,
         category_type: req.body.category_type,
         ingredients: req.body.ingredients,
+        photo: req.body.photo,
     }, req.params.id)
     .then(recipe => {
         res.redirect('/recipes');
