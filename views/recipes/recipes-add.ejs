@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-  <h3 class='nav title'>Now We're Cookin'</h3>
+  <h3 class='logo'>Now We're Cookin'</h3>
   <nav>
     <li><a href='/'>Home</a></li>
     <li><a href='/recipes'>Recipes</a></li>
@@ -8,25 +8,25 @@
   </nav>
 </header>
 <div class='container'>
-  <h1 class='title'>New Recipe</h1>
+  <h1 class='primary'>New Recipe</h1>
   <hr>
   <div class='polaroid single'>
     <div class='polaroid_photo blank'></div>
     <div class='polaroid_content'>
-      <label for="photo">Photo Url<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
+      <label for="photo">Photo Url:<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
     </div>
   </div>
   <form class='input_form' id='input_form' method='POST' action='/recipes'>
     <div class='button_container'>
-      <label for='title'>Title<input name='title' id='title' type='text' class='form'/></label></br>
-      <label for='author'>Author<input name='author' id='author' type='text' class='form'/></label></br>
+      <label for='title'>Title:<input name='title' id='title' type='text' class='form'/></label></br>
+      <label for='author'>Author:<input name='author' id='author' type='text' class='form'/></label></br>
       <label for='category_type'>Category<input name='category_type' id='category_type' type='text' class='form'/></label></br>
-      <label id='ingredientlist'>Ingredients</br></br>
+      <label id='ingredientlist'>Ingredients:</br></br>
           <input class='form item' type='text'/>
       </label></br>
       <button type="button" class='button add_ingredient'>Add Ingredient</button></br>
       <input name='ingredients' id='ingredients' type='text'/></br> 
-      <label for='description'>Description</br><textarea name='description' id='description' class='form' placeholder='Tell us about your recipe here...'></textarea></label></br>
+      <label for='description'>Directions:</br><textarea name='description' id='description' class='form' placeholder='Tell us about your recipe here...'></textarea></label></br>
       <input type='submit' class='button' id='submit1' value='Create Recipe' />
     </div>
   </form>

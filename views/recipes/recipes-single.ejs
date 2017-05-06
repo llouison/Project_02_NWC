@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h3 class='nav title'>Now We're Cookin'</h3>
+    <h3 class='logo'>Now We're Cookin'</h3>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class='description'>
-        <p><span class='author'>Author: </span><%= recipe.author %></p>
+        <p><span class='title'>Author: </span><%= recipe.author %></p>
         <p><span class='title'>Category: </span><%= recipe.category_type %></p>
         <span class='title'>Ingredients: </span>
         <% recipe.ingredients.forEach(function(ingredient) { %>

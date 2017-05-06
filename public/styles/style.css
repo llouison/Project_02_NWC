@@ -21,14 +21,17 @@ header {
     display: flex;
     flex-direction: row; 
 }
-.nav, nav, li {
+nav, li {
     flex: 1;
     font-size: 20px;
     list-style: none;
 }
-.nav {
+.logo {
     flex: 2;
+    font-size: 23px;
+    font-family: 'Love Ya Like A Sister', cursive;
     text-align: left;
+    color: #f4f4f4;
 }
 nav {
     display: flex;
@@ -45,10 +48,16 @@ nav {
 h1 {
     font-size: 60px;
     text-align: center;
+    word-wrap: break-word;
 }
-.title, .primary{
+.title, .primary {
     font-family: 'Love Ya Like A Sister', cursive;
+}
+.primary{
     color: #f4f4f4;
+}
+.title, label {
+    color: #FF7E1A;
 }
 .primary {
     margin: 30px;
@@ -58,6 +67,10 @@ h1 {
     font-size: 40px;
     color: #000;
     padding: 20px;
+}
+.individ {
+    padding: 0;
+    line-height: 40px;
 }
 .secondary {
     font-size: 30px;
@@ -163,9 +176,6 @@ a:hover {
 }
 
 /* ###### Form ###### */
-label {
-    color: #818181;
-}
 #ingredientlist {
     margin: 10px 0;
 }

@@ -1,6 +1,6 @@
 <% include ../partials/boilerplate %>
 <header>
-    <h3 class='nav title'>Now We're Cookin'</h3>
+    <h3 class='logo'>Now We're Cookin'</h3>
     <nav>
         <li><a href='/'>Home</a></li>
         <li><a href='/recipes'>Recipes</a></li>
@@ -8,22 +8,22 @@
     </nav>
 </header>
 <div class='container'>
-    <h1 class='title'>Edit Recipe</h1>
+    <h1 class='primary'>Edit Recipe</h1>
     <hr>
     <div class='polaroid single'>
         <div class='polaroid_photo'>
             <img src='../../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
         </div>
         <div class='polaroid_content'>
-            <label for="photo">Photo Url<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
+            <label for="photo">Photo Url:<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
         </div>
     </div>
     <form class='input_form' id='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
         <div class='button_container'>
-            <label for="title">Title<input name='title' id='title' type='text' value='<%= recipe.title %>' /></label></br>
-            <label for="author">Author<input name='author' id='author' type='text' value='<%= recipe.author %>' /></label></br>
-            <label for="category">Category<input name='category_type' id='category' type='text' value='<%= recipe.category_type %>' /></label></br>
-            <label id='ingredientlist'>Ingredients</br>
+            <label for="title">Title:<input name='title' id='title' type='text' value='<%= recipe.title %>' /></label></br>
+            <label for="author">Author:<input name='author' id='author' type='text' value='<%= recipe.author %>' /></label></br>
+            <label for="category">Category:<input name='category_type' id='category' type='text' value='<%= recipe.category_type %>' /></label></br>
+            <label id='ingredientlist'>Ingredients:</br>
                 <% {recipe.ingredients.forEach(function(ingredient) { %>
                     <input class='item' type='text' value='<%= ingredient %>' />
                 <% })} %>
@@ -31,7 +31,7 @@
             <button type="button" class='button add_ingredient'>Add Ingredient</button>
             <input name='ingredients' id='ingredients' type='text'/> 
             <div class='button_container'>
-        <label for="description">Description</br><textarea name='description' id='description'><%= recipe.description %></textarea></label>
+        <label for="description">Directions:</br><textarea name='description' id='description'><%= recipe.description %></textarea></label>
         
             <input type='submit' class='button' id='submit1' value='Update Recipe' />
         </div>
