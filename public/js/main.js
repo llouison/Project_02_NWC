@@ -1,17 +1,39 @@
-console.log('connected');
 
+    // creating a variable for the add ingredient button
+    const  addButton = document.querySelector('.add_ingredient');
+    // adding an event listener to the button that creates a new ingredient input on the click and appends it to the ingredients list
+    addButton.addEventListener('click', (event) => {
+        const ingredientContainer = document.getElementById('ingredientlist');
+        const newIngredient = document.createElement('input');
+        newIngredient.setAttribute('class', 'form item');
+        ingredientContainer.appendChild(newIngredient);  
+    })
 
-// creating a variable for the add ingredient button
-const  addButton = document.querySelector('.add_ingredient');
+    // creating a variable for the submit button
+    const submitButton = document.querySelector('#submit1');
 
-// adding an event listener to the button that creates a new ingredient input on the click and appends it to the ingredients list
-addButton.addEventListener('click', () => {
-    const previousIngredient = document.getElementById('ingredientlist');
-    console.log(previousIngredient);
-    let newIngredient = document.createElement('input');
-    newIngredient.setAttribute('name', 'ingredients');
-    newIngredient.setAttribute('class', 'form');
-    newIngredient.setAttribute('id', 'ingredients');
-    newIngredient.setAttribute('type', 'text');
-    previousIngredient.appendChild(newIngredient);  
-})
+    // adding an event listener to the button that prevents the default action
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        // creating a variable for all the ingredients
+        const ingredients = document.querySelectorAll('.item');
+        // setting an empty string
+        let itemString = '';
+        // concatenating the empty string to each ingredient. The last ingredient doesn't get a comma
+        ingredients.forEach(function(ingredient, index){
+            if(index === (ingredients.length-1)){
+                itemString = itemString.concat(`${ingredient.value}`);
+            }
+            else {
+                itemString = itemString.concat(`${ingredient.value},`);
+            }
+        })
+        // setting a variable for the hidden ingredients input box
+        const ingredientInput = document.querySelector('#ingredients');
+        // changing the value of the ingredient input to the concatenated string with {} to be recognized by sql
+        ingredientInput.value = `{${itemString}}`;
+        // locating the form 
+        const myForm = document.getElementById('input_form');
+        // reinitializing the submit function of the form
+        myForm.submit(); 
+    })
