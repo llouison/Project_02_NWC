@@ -53,19 +53,17 @@ h1 {
 .title, .primary {
     font-family: 'Love Ya Like A Sister', cursive;
 }
-.primary{
-    color: #f4f4f4;
-}
-.title, label {
-    color: #E25D38;
-}
 .primary {
+    color: #f4f4f4;
     margin: 30px;
+}
+.title {
+    color: #E25D38;
 }
 .recipe_title {
     font-family: 'Shadows Into Light', cursive;
     font-size: 40px;
-    color: #000;
+    color: #222;
     padding: 20px;
 }
 .individ {
@@ -79,7 +77,7 @@ h1 {
 h2 {
     padding-bottom: 12px;
     text-align: center;
-    color: #000;
+    color: #222;
 }
 p {
     margin: 1em 0;
@@ -87,7 +85,6 @@ p {
 hr {
     width: 70vw;
     border: 1px solid #f4f4f4;
-    margin: 15px 0; 
 }
 
 /* ###### Links ###### */
@@ -163,7 +160,7 @@ a:hover {
 .polaroid_photo {
     width: 50vh;
     height: 45vh;
-    border: 20px solid #f4f4f4;
+    border: 20px solid #f5f5f5;
     box-sizing: border-box;
     align-self: flex-start;
 }
@@ -190,7 +187,7 @@ a:hover {
 }
 input, textarea {
     font-size: 1em;
-    color: #f5f5f5;
+    color: #f4f4f4;
     padding: 5px;
     border: none;
     border-bottom: 3px solid grey;
@@ -200,7 +197,7 @@ input, textarea {
 }
 input:focus {
     outline: none;
-    border-bottom: 3px solid #f5f5f5;
+    border-bottom: 3px solid #f4f4f4;
     transition: 0.5s all;
 }
 .single_form {
@@ -213,7 +210,7 @@ textarea  {
 }
 textarea:focus {
     outline: none;
-    border: 3px solid #f5f5f5;
+    border: 3px solid #f4f4f4;
 }
 #photo {
     color: #222;
@@ -228,9 +225,9 @@ textarea:focus {
 /* ###### Buttons ###### */
 .button {
     font-size: 1em;
-    color: #f5f5f5;
+    color: #f4f4f4;
     padding: 10px;
-    border: 1px dashed #f5f5f5;
+    border: 1px dashed #f4f4f4;
     border-radius: 10px;
     background: transparent;
     margin: 20px;
@@ -238,22 +235,22 @@ textarea:focus {
     cursor: pointer;   
 }
 .button:hover {
-    color: #000;
-    background-color: #f5f5f5;
+    color: #222;
+    background-color: #f4f4f4;
     border: none;
     box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75);
 }
 .black {
-    color: #000;
+    color: #222;
     padding: 2px 8px;
-    border: 1px solid #000;
+    border: 1px solid #222;
     border-radius: 6px;
     margin: 0 5px;
 }
 
 /* ###### Footer ###### */
 footer p {
-    color: #818181;
+    color: grey;
 }
 footer a {
     text-decoration: underline;
@@ -323,7 +320,7 @@ footer a {
 .polaroid_photo {
     width: 50vw;
     height: 45vw;
-    border: 10px solid #f4f4f4;
+    border: 10px solid #f5f5f5;
 }
 .polaroid_content {
     height: 25vw;
