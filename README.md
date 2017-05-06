@@ -48,9 +48,9 @@ Users should be able to:
 
 ## Major Coding Win
 ```js
-//created a migration that added an ingredients column to my recipe table that used the array datatype
+//created a migration that added an ingredients column to my recipe table that used the array datatype. It's very important to set the default value to an empty array otherwise it will be null and throw errors. 
 ALTER TABLE recipes 
-ADD COLUMN ingredients text[];
+ADD COLUMN ingredients text[] SET DEFAULT '{}';
 
 //learned how to insert arrays into SQL
 UPDATE recipes
@@ -61,6 +61,37 @@ WHERE id = 5;
 <% recipe.ingredients.forEach(function(ingredient) { %>
     <p class='ingredient'><%= ingredient %></p>
 <% }) %>
+
+// created a function that retrieves individual ingredients and concatenates them to sql format to be updated in the database
+
+// creating a variable for the submit button
+const submitButton = document.querySelector('#submit1');
+
+// adding an event listener to the button that prevents the default action
+submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    // creating a variable for all the ingredients
+    const ingredients = document.querySelectorAll('.item');
+    // setting an empty string
+    let itemString = '';
+    // concatenating the empty string to each ingredient. The last ingredient doesn't get a comma
+    ingredients.forEach(function(ingredient, index){
+        if(index === (ingredients.length-1)){
+            itemString = itemString.concat(`${ingredient.value}`);
+        }
+        else {
+            itemString = itemString.concat(`${ingredient.value},`);
+        }
+    })
+    // setting a variable for the hidden ingredients input box
+    const ingredientInput = document.querySelector('#ingredients');
+    // changing the value of the ingredient input to the concatenated string with {} to be recognized by sql
+    ingredientInput.value = `{${itemString}}`;
+    // locating the form 
+    const myForm = document.getElementById('input_form');
+    // reinitializing the submit function of the form
+    myForm.submit(); 
+})
 ```
 
 ## How-to-use/Download and Installation Instructions
