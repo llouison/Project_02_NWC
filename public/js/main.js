@@ -5,7 +5,7 @@
     addButton.addEventListener('click', (event) => {
         const ingredientContainer = document.getElementById('ingredientlist');
         const newIngredient = document.createElement('input');
-        newIngredient.setAttribute('class', 'form item');
+        newIngredient.setAttribute('class', 'item');
         ingredientContainer.appendChild(newIngredient);  
     })
 
