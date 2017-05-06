@@ -12,25 +12,29 @@
     <hr>
     <div class='polaroid single'>
         <div class='polaroid_photo'>
-            <img src='../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
+            <img src='../../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
         </div>
         <div class='polaroid_content'>
-            <h2>Your Photo Here</h2>
+            <label for="photo">Photo Url<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
         </div>
     </div>
     <form class='input_form' id='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
-        <label for="title">Title<input name='title' class='form' id='title' type='text' value='<%= recipe.title %>' /></label>
-        <label for="author">Author<input name='author' class='form' id='author' type='text' value='<%= recipe.author %>' /></label>
-        <label for="category">Category<input name='category_type' class='form' id='category' type='text' value='<%= recipe.category_type %>' /></label>
-        <label id='ingredientlist'>Ingredients</br>
-            <% {recipe.ingredients.forEach(function(ingredient) { %>
-                <input class='form item' type='text' value='<%= ingredient %>' />
-            <% })} %>
-        </label>
-        <button type="button" class='add_ingredient'>Add Ingredient</button>
-        <input name='ingredients' id='ingredients' type='text'/> 
-        <label for="description">Description<textarea name='description' id='description' class='form'><%= recipe.description %></textarea></label>
-        <input type='submit' class='button' id='submit1'value='Update' />
+        <div class='button_container'>
+            <label for="title">Title<input name='title' id='title' type='text' value='<%= recipe.title %>' /></label></br>
+            <label for="author">Author<input name='author' id='author' type='text' value='<%= recipe.author %>' /></label></br>
+            <label for="category">Category<input name='category_type' id='category' type='text' value='<%= recipe.category_type %>' /></label></br>
+            <label id='ingredientlist'>Ingredients</br>
+                <% {recipe.ingredients.forEach(function(ingredient) { %>
+                    <input class='item' type='text' value='<%= ingredient %>' />
+                <% })} %>
+            </label>
+            <button type="button" class='button add_ingredient'>Add Ingredient</button>
+            <input name='ingredients' id='ingredients' type='text'/> 
+            <div class='button_container'>
+        <label for="description">Description</br><textarea name='description' id='description'><%= recipe.description %></textarea></label>
+        
+            <input type='submit' class='button' id='submit1' value='Update Recipe' />
+        </div>
     </form>
 </div> <!-- end of container -->
 <script src='../../static/js/main.js'></script>
