@@ -21,8 +21,8 @@
         <p><span class='title'>Category: </span><%= recipe.cetegory_type %></p>
         <span class='title'>Ingredients: </span>
         <% recipe.ingredients.forEach(function(ingredient) { %>
-        <p class='ingredient'><%= ingredient %></p>
-         <% }) %>
+            <p><%= ingredient %></p>
+        <% }) %>
         <p><span class='title'>Description: </span><%= recipe.description %></p>
         <div class='button_container'>
             <a class='button' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
@@ -32,6 +32,6 @@
         </div>
         <a class='back' href='/recipes'>&larr; Return to recipe list</a>
     </div>
-</div>
+</div> <!-- end of container -->
 <% include ../partials/end %>
    

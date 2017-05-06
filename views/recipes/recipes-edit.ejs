@@ -18,21 +18,20 @@
             <h2>Your Photo Here</h2>
         </div>
     </div>
-    <form class='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
+    <form class='input_form' id='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
         <label for="title">Title<input name='title' class='form' id='title' type='text' value='<%= recipe.title %>' /></label>
         <label for="author">Author<input name='author' class='form' id='author' type='text' value='<%= recipe.author %>' /></label>
         <label for="category">Category<input name='category_type' class='form' id='category' type='text' value='<%= recipe.category_type %>' /></label>
-        <section id='ingredientlist'>
-            <label for="ingredients">Ingredients</br>
-            <% recipe.ingredients.forEach(function(ingredient) { %>
-            <input name='ingredients' class='form' id='ingredients' type='text' value='<%= ingredient %>' />
-            <% }) %>
-            </label>
-        </section>
+        <label id='ingredientlist'>Ingredients</br>
+            <% {recipe.ingredients.forEach(function(ingredient) { %>
+                <input class='form item' type='text' value='<%= ingredient %>' />
+            <% })} %>
+        </label>
         <button type="button" class='add_ingredient'>Add Ingredient</button>
+        <input name='ingredients' id='ingredients' type='text'/> 
         <label for="description">Description<textarea name='description' id='description' class='form'><%= recipe.description %></textarea></label>
-        <input type='submit' class='button' value='Update' />
-</form>
-</div>
+        <input type='submit' class='button' id='submit1'value='Update' />
+    </form>
+</div> <!-- end of container -->
 <script src='../../static/js/main.js'></script>
 <% include ../partials/end %>
