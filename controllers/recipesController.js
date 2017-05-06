@@ -43,7 +43,7 @@ controller.create = (req, res) => {
         ingredients: req.body.ingredients,
     })
     .then(recipe => {
-        res.redirect(`/recipes/${id}`);
+        res.redirect('/recipes');
     })
     .catch(err => {
         res.status(400).json(err);
