@@ -176,7 +176,7 @@ a:hover {
 #ingredientlist {
     margin: 10px 0;
 }
-#ingredients {
+.hidden {
     display: none;
 }
 .input_form {
