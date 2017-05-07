@@ -20,9 +20,18 @@
     <div class='button_container'>
       <label for='title' class='title'>Title:<input name='title' id='title' type='text' class='form'/></label></br>
       <label for='author' class='title'>Author:<input name='author' id='author' type='text' class='form'/></label></br>
-      <label for='category_type' class='title'>Category<input name='category_type' id='category_type' type='text' class='form'/></label></br>
+      <label for='category_type' class='title'>Category
+        <select name='category_type' id='category'>
+          <option value='1'>Seafood</option>
+          <option value='2'>Fish</option>
+          <option value='3'>Beef</option>
+          <option value='4'>Poultry</option>
+          <option value='5'>Pork</option>
+          <option value='6'>Vegetarian</option>
+          <option value='7'>Misc.</option>
+        </select>
+      </label></br>
       <label id='ingredientlist' class='title'>Ingredients:</br></br>
-          <input class='form item' type='text'/>
       </label></br>
       <button type='button' class='button add_ingredient'>Add Ingredient</button></br>
       <input name='ingredients' class='hidden' id='ingredients' type='text'/> 
