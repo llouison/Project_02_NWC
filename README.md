@@ -39,7 +39,7 @@ Users should be able to:
 - fetch (maybe jQuery)
 - CSS3: The app is well-designed and considers user experience and usability
 - JavaScript: the app has front-end interactivity
-- Spoonacular API: 
+- Edamam API: the app uses the third party API powered by Edamam to allow user recipe search functionality
 - Heroku web hosting
 
 ## Approach taken
@@ -106,4 +106,6 @@ The objective of the app is for users to easily be able to create, view, edit, a
 5. 
 
 ## Unsolved Problems/Next Steps
+- If the recipe title is very long, it overflows the styling on the index page
 - If there is a blank ingredient input, the sql array is incorrect and throws an error. I tried to create an if statement to check for empty values but it gave more errors.
+- I couldn't get the window.onscroll function to work.
