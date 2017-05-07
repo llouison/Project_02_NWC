@@ -150,6 +150,9 @@ a:hover {
 .index_img {
     width: 50%;
 }
+.attribution {
+    width: 10%;
+}
 .polaroid_photo {
     width: 50vh;
     height: 45vh;
@@ -222,6 +225,13 @@ textarea:focus {
 .button_container {
     text-align: center;
 }
+.search {
+    width: 80%;
+    margin: 50px;
+}
+.search input {
+    width: 50%;
+}
 
 /* ###### Buttons ###### */
 .button {
@@ -268,7 +278,7 @@ footer a {
 
 @media screen and (max-width: 1000px) {
   body, select {
-    font-size: 12px;
+    font-size: 16px;
   }
   header {
     margin-top: 10px;
@@ -277,6 +287,9 @@ footer a {
   nav {
     flex-direction: column;
     justify-content: center;
+  }
+  .logo {
+      text-align: center;
   }
   /* ####### Text ###### */
   h1 {
@@ -293,6 +306,9 @@ footer a {
   h3 {
     line-height: 30px;
   }
+  .attribution {
+    width: 20%;
+}
 /* ###### Polaroid Container ###### */
   .polaroid {
     width: 40vw;
@@ -310,9 +326,6 @@ footer a {
 /*###### Mobile Media Query ######*/
 @media screen and (max-width: 600px) {
 .nav {
-    text-align: center;
-}
-.logo {
     text-align: center;
 }
 .tertiary {
