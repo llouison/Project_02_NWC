@@ -1,3 +1,6 @@
+// importing isomorphic fetch
+require('isomorphic-fetch');
+
 function getRecipe(req, res, next) {
   console.log('hello world! i\'m in recipesHelpers');
   next();

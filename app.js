@@ -8,6 +8,8 @@ const methodOverride = require('method-override');
 // creating a variable for the express function
 const app = express();
 
+// importing the recipeHelper function for the search view
+const recipeHelpers = require('./services/recipes/recipeHelpers');
 // importing routes
 const recipesRoutes = require('./routes/recipesRoutes');
 
@@ -42,7 +44,7 @@ app.get('/',(req, res) => {
 });
 
 // setting up the route to the search page
-app.get('/search',(req, res) => {
+app.get('/search', recipeHelpers.getRecipe, (req, res) => {
     res.render('search', {
         documentTitle: 'Now We\'re Cookin\'',
         subTitle: 'Can\'t find what you\'re loking for? Try searching for it here!',
