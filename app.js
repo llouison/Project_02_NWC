@@ -41,6 +41,15 @@ app.get('/',(req, res) => {
     });
 });
 
+// setting up the route to the search page
+app.get('/search',(req, res) => {
+    res.render('search', {
+        documentTitle: 'Now We\'re Cookin\'',
+        subTitle: 'Can\'t find what you\'re loking for? Try searching for it here!',
+        message: 'Powered by',
+    });
+});
+
 // directing the app to use the recipesRoutes for all recipes urls
 app.use('/recipes', recipesRoutes);
 
