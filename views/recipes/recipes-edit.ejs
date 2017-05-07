@@ -12,10 +12,10 @@
     <hr>
     <div class='polaroid single'>
         <div class='polaroid_photo'>
-            <img src='../../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
+            <img src='<%= recipe.photo %>' alt='<%= recipe.title %> dish'>
         </div>
         <div class='polaroid_content'>
-            <label for='photo' class='title'>Photo Url:<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
+            <label for='photourl' class='title'>Photo Url:<input name='photourl' id='photourl' type='text' value='<%= recipe.photo %>' /></label></br>
         </div>
     </div>
     <form class='input_form' id='input_form' method='POST' action='/recipes/<%= id %>?_method=PUT'>
@@ -29,7 +29,8 @@
                 <% })} %>
             </label>
             <button type='button' class='button add_ingredient'>Add Ingredient</button>
-            <input name='ingredients' id='ingredients' type='text'/> 
+            <input name='ingredients' class='hidden' id='ingredients' type='text'/> 
+            <input name='photo' class='hidden' id='photosub' type='text'/> 
             <div class='button_container'>
         <label for='description' class='title'>Directions:</br><textarea name='description' id='description'><%= recipe.description %></textarea></label>
         

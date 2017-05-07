@@ -13,7 +13,7 @@
   <div class='polaroid single'>
     <div class='polaroid_photo blank'></div>
     <div class='polaroid_content'>
-      <label for='photo' class='title'>Photo Url:<input name='photo' id='photo' type='text' placeholder='paste url here'/></label></br>
+      <label for='photourl' class='title'>Photo Url:</br><input name='photourl' id='photourl' type='text' placeholder='paste image url here'/></label></br>
     </div>
   </div>
   <form class='input_form' id='input_form' method='POST' action='/recipes'>
@@ -25,7 +25,8 @@
           <input class='form item' type='text'/>
       </label></br>
       <button type='button' class='button add_ingredient'>Add Ingredient</button></br>
-      <input name='ingredients' id='ingredients' type='text'/></br> 
+      <input name='ingredients' class='hidden' id='ingredients' type='text'/> 
+      <input name='photo' class='hidden' id='photosub' type='text'/> 
       <label for='description' class='title'>Directions:</br><textarea name='description' id='description' class='form' placeholder='Tell us about your recipe here...'></textarea></label></br>
       <input type='submit' class='button' id='submit1' value='Create Recipe' />
     </div>

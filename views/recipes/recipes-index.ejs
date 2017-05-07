@@ -14,7 +14,7 @@
     <% recipesData.forEach(function(recipe) { %>
         <div class='polaroid single index'>
             <div class='polaroid_photo'>
-                <img src='../static/images/shrimp_scampi.jpg' alt='<%= recipe.title %> dish'>
+                <img src='<%= recipe.photo %>' alt='<%= recipe.title %> dish'>
             </div>
             <div class='polaroid_content'>
                 <h1 class='secondary recipe_title'><%= recipe.title %></h1>
