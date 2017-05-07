@@ -267,7 +267,7 @@ footer a {
 /*################################*/
 
 @media screen and (max-width: 1000px) {
-  body {
+  body, select {
     font-size: 12px;
   }
   header {
