@@ -131,13 +131,6 @@ a:hover {
     margin: 40px;
     box-sizing: border-box;
 }
-.index {
-    filter: grayscale(100%);
-    transition: all 0.4s ease;
-}
-.index:hover {
-    filter: none;
-}
 .polaroid:nth-child(2n+0) {
     transform: rotate(-2deg);
 }
@@ -215,10 +208,11 @@ textarea:focus {
 .description_text {
     text-align: justify;
 }
-#photo {
+#photourl {
     color: #222;
+    width: 80%;
 }
-#photo:focus {
+#photourl:focus {
     border-bottom: 3px solid #222;
 }
 .button_container {
@@ -314,6 +308,9 @@ footer a {
 .nav {
     text-align: center;
 }
+.logo {
+    text-align: center;
+}
 .tertiary {
     display: none;
 }
@@ -338,9 +335,14 @@ footer a {
 .index {
     filter: none;
 }
+/* ###### Form ###### */
+.input_form {
+    width: 100%;
+}
 /* ###### Text ###### */
 .recipe_title {
     font-size: 18px;
+    font-weight: bold;
 }
 .secondary {
     padding-top: 0;
@@ -353,6 +355,10 @@ footer a {
 }
 .black {
     padding: 2px 5px;
+}
+#topButton {
+    width: 40px;
+    right: 5px;
 }
 
 }

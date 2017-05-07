@@ -31,6 +31,15 @@ submitButton.addEventListener('click', (event) => {
     const ingredientInput = document.querySelector('#ingredients');
     // changing the value of the ingredient input to the concatenated string with {} to be recognized by sql
     ingredientInput.value = `{${itemString}}`;
+
+    // accessing the value from the visible photo input
+    const photourl = document.querySelector('#photourl').value;
+    console.log(photourl);
+    // setting a variable for the hidden photo input box
+    const photoInput = document.querySelector('#photosub');
+    console.log(photoInput);
+    // changing the value of the photo input to the value entered
+    photoInput.value = photourl;
     // locating the form 
     const myForm = document.getElementById('input_form');
     // reinitializing the submit function of the form
