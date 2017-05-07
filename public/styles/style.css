@@ -196,6 +196,7 @@ input:focus {
 select {
     width: 40%;
     height: 30px;
+    color: #222;
     font-size: 18px;
     margin: 10px 15px 20px;
 }
