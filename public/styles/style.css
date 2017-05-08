@@ -370,6 +370,9 @@ footer a {
 .description {
     width: 60%;
 }
+.button {
+    display: inline-block;
+}
 .black {
     padding: 2px 5px;
 }
