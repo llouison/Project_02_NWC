@@ -117,4 +117,4 @@ submitButton.addEventListener('click', (event) => {
 ## Unsolved Problems/Next Steps
 - If there is a blank ingredient input, the sql array is incorrect and throws an error. I tried to create an if statement to check for empty values but it gave more errors.
 - I couldn't get the window.onscroll function to work for the back to top button
-- Post MVP I'd like to incorporate user authentication
+- Post MVP I'd like to incorporate user authentication and refactor my main.js to jQuery, and add labels to my ingredients to make my app more accessible.
