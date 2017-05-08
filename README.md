@@ -1,5 +1,7 @@
 # Project #2 - Now We're Cookin'
 
+![NWC_index](./assets/NWCindex.png)
+
 ## User Story
 As a user, I want to have a place where I can create, view, edit, and delete recipes.
 
@@ -36,11 +38,11 @@ Users should be able to:
 - Node & Express: the app has its own server, built using Express.
 - MVC Pattern: the app uses the Model View Controller (MVC) programming design pattern. 
 - SQL/ PG-Promise: The app persists data and uses multiple SQL tables
-- fetch (maybe jQuery)
 - CSS3: The app is well-designed and considers user experience and usability
 - JavaScript: the app has front-end interactivity
 - Edamam API: the app uses the third party API powered by Edamam to allow user recipe search functionality
-- Heroku web hosting
+- Isomorphic Fetch: the app uses isomorphic-fetch to fetch the third party api on the back-end
+- Heroku web hosting: the app is hosted on Heroku
 
 ## Approach taken
 1. 
@@ -108,4 +110,6 @@ The objective of the app is for users to easily be able to create, view, edit, a
 ## Unsolved Problems/Next Steps
 - If the recipe title is very long, it overflows the styling on the index page
 - If there is a blank ingredient input, the sql array is incorrect and throws an error. I tried to create an if statement to check for empty values but it gave more errors.
-- I couldn't get the window.onscroll function to work.
+- I couldn't get the window.onscroll function to work for the back to top button
+Post MVP I'd like to 
+- Incorporate user authentication
