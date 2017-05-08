@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS categories (
 
 CREATE TABLE IF NOT EXISTS recipes (
     id BIGSERIAL PRIMARY KEY,
-    title VARCHAR(255),
+    title VARCHAR(30),
     author VARCHAR(255),
     description VARCHAR(1028),
     category_type INTEGER REFERENCES categories(id)
