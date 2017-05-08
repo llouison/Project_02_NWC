@@ -45,8 +45,19 @@ Users should be able to:
 - Heroku web hosting: the app is hosted on Heroku
 
 ## Approach taken
-1. 
-2. 
+1. Drew out the tables & columns of the recipe database.
+2. Constructed wireframes to gain an understanding of the flow of the app.
+3. Found the third party API to incroporate into the app. 
+4. Set up the github repo and project board with a list of steps to completion.
+5. Setup the database and populated the tables. 
+6. Created model, controller, and route architecture
+7. Created views
+8. Imported all to app.js
+9. Styled views
+10. Incorporated third party API
+11. Launched to Heroku
+
+ 
 
 ## Major Coding Win
 ```js
@@ -96,16 +107,14 @@ submitButton.addEventListener('click', (event) => {
 })
 ```
 
-## How-to-use/Download and Installation Instructions
+## Installation Instructions
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Run `npm install` to install all necessary dependencies listed in the package.json
+2. Run all the migration files (un-comment the connect to database lines first) `psql -f migration_date.sql` in ascending order to create and alter the tables. Change the date in the snippet accordingly. 
+3. Run the seed file (un-comment the connect to database lines first) `psql -f seed.sql` to populate the tables.
+4. To launch the app locally run `npm run dev` and navigate to __localhost:3000__ in your browser.
 
 ## Unsolved Problems/Next Steps
-- If the recipe title is very long, it overflows the styling on the index page
 - If there is a blank ingredient input, the sql array is incorrect and throws an error. I tried to create an if statement to check for empty values but it gave more errors.
 - I couldn't get the window.onscroll function to work for the back to top button
 - Post MVP I'd like to incorporate user authentication
