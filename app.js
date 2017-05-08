@@ -49,6 +49,7 @@ app.get('/search', recipeHelpers.getRecipe, (req, res) => {
         documentTitle: 'Now We\'re Cookin\'',
         subTitle: 'Can\'t find what you\'re loking for? Try searching for it here!',
         message: 'Powered by',
+        recipeHits: res.locals.recipeHits, 
     });
 });
 
