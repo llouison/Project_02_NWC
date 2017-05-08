@@ -3,7 +3,7 @@
 ![NWC_index](./assets/NWCindex.png)
 
 ## User Story
-As a user, I want to have a place where I can create, view, edit, and delete recipes.
+A user wants to have a place where they can create, view, edit, and delete recipes.
 
 ### Acceptance Criteria:
 Users should be able to:
@@ -98,9 +98,6 @@ submitButton.addEventListener('click', (event) => {
 
 ## How-to-use/Download and Installation Instructions
 
-### Objective
-The objective of the app is for users to easily be able to create, view, edit, and delete recipes.
-
 1. 
 2. 
 3. 
@@ -111,5 +108,4 @@ The objective of the app is for users to easily be able to create, view, edit, a
 - If the recipe title is very long, it overflows the styling on the index page
 - If there is a blank ingredient input, the sql array is incorrect and throws an error. I tried to create an if statement to check for empty values but it gave more errors.
 - I couldn't get the window.onscroll function to work for the back to top button
-Post MVP I'd like to 
-- Incorporate user authentication
+- Post MVP I'd like to incorporate user authentication
