@@ -11,8 +11,10 @@
 <div class='container'>
     <h1 class='logo'><%= subTitle %></h1>
     <div class='button_container search'>
-        <input type="text" name="search" id='search' placeholder="Enter an ingredient...">
-        <button class='button' id='searchButton'>Search</button>
+        <form method='get'>
+            <input type="text" name="search" id='search' placeholder="Enter an ingredient...">
+            <input type='submit' class='button' id='SearchButton' value='Search' />
+        </form>
     </div>
     <% recipeHits.forEach(function(hit) { %>
         <div class='polaroid single index'>
