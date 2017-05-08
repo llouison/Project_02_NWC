@@ -1,5 +1,5 @@
 -- creating the categories and recipes tables in the recipe development database
-\connect recipe_development
+-- \connect recipe_development
 
 CREATE TABLE IF NOT EXISTS categories (
     id BIGSERIAL PRIMARY KEY,

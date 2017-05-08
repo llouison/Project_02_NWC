@@ -1,5 +1,5 @@
 -- connecting to the recipe development database
-\connect recipe_development
+-- \connect recipe_development
 
 -- adding the photo column to the recipe development database
 
