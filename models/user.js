@@ -1,11 +1,15 @@
+// importing pg-promise
 const db = require('../db/config');
 
+// creating a model object
 const User = {};
 
+// creating a method to find the username in the database
 User.findByUserName = userName => {
   return db.oneOrNone('SELECT * FROM users WHERE username = $1', [userName]);
 };
 
+// creating a method to create a new user 
 User.create = user => {
   return db.one(
     `
@@ -17,4 +21,5 @@ User.create = user => {
   );
 };
 
+// exporting the user model
 module.exports = User;
