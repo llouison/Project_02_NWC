@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/llouison/Project_02_NWC#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
