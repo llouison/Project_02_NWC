@@ -225,6 +225,13 @@ textarea:focus {
 .button_container {
     text-align: center;
 }
+.form_container {
+    width: 50%;
+    text-align: center;
+}
+.form_container label {
+    display: block;
+}
 .search {
     width: 80%;
     margin: 50px;
