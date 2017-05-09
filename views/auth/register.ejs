@@ -1,0 +1,21 @@
+<% include ../partials/boilerplate %>
+<header>
+    <h3 class='logo'>Now We're Cookin'</h3>
+    <nav>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/recipes'>Recipes</a></li>
+        <li><a href='/recipes/add'>Add</a></li>
+        <li><a href='/search'>Search</a></li>
+    </nav>
+</header>
+<div class='container'>
+    <form method='POST' action='/auth/register'>
+         <label for='username' class='title'>Username<input name='username' type='text' placeholder='username' /></label>
+         <label for='first_name' class='title'>First Name<input name='first_name' type='text' placeholder='first name' /></label>
+        <label for='last_name' class='title'>Last Name<input name='last_name' type='text' placeholder='last name' /></label>
+        <label for='email' class='title'>Email<input name='email' type='email' placeholder='email' /></label>
+        <label for='password' class='title'>Password<input name='password' type='password' placeholder='password' /></label>
+        <input type='submit' class='button' value='Register' />
+    </form>
+</div>
+<% include ../partials/end %>
