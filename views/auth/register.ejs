@@ -10,14 +10,15 @@
 </header>
 <div class='container'>
     <h1 class='primary'><%= message %></h1>
-    <hr>
-    <form method='POST' action='/auth/register'>
-         <label for='username' class='title'>Username<input name='username' type='text' placeholder='username' /></label>
-         <label for='first_name' class='title'>First Name<input name='first_name' type='text' placeholder='first name' /></label>
-        <label for='last_name' class='title'>Last Name<input name='last_name' type='text' placeholder='last name' /></label>
-        <label for='email' class='title'>Email<input name='email' type='email' placeholder='email' /></label>
-        <label for='password' class='title'>Password<input name='password' type='password' placeholder='password' /></label>
-        <input type='submit' class='button' value='Register' />
-    </form>
+    <div class='form_container'>
+        <form method='POST' action='/auth/register'>
+            <label for='username' class='title'>Username<input name='username' type='text' /></label>
+            <label for='first_name' class='title'>First Name<input name='first_name' type='text'/></label>
+            <label for='last_name' class='title'>Last Name<input name='last_name' type='text'/></label>
+            <label for='email' class='title'>Email<input name='email' type='email'/></label>
+            <label for='password' class='title'>Password<input name='password' type='password'/></label>
+            <input type='submit' class='button' value='Register' />
+        </form>
+    </div>
 </div>
 <% include ../partials/end %>
