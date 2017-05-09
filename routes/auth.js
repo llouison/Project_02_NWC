@@ -11,6 +11,7 @@ const passport = require('../services/auth/local');
 // setting a route for the user login view
 router.get('/login', (req, res) => {
   res.render('auth/log-in', {
+    documentTitle: `Now We're Cookin' - New Recipe`,
     message: 'User Login',
   });
 });
@@ -18,6 +19,7 @@ router.get('/login', (req, res) => {
 // setting a route for the user registration view
 router.get('/register', (req, res) => {
   res.render('auth/register', {
+    documentTitle: `Now We're Cookin' - New Recipe`,
     message: 'User Registration',
   });
 });
