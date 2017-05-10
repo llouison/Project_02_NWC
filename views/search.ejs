@@ -11,12 +11,12 @@
 <div class='container'>
     <h1 class='logo'><%= subTitle %></h1>
     <div class='button_container search'>
-        <form method='get'>
+        <form action='/search' method='get'>
             <input type="text" name="search" id='search' placeholder="Enter an ingredient...">
             <input type='submit' class='button' id='SearchButton' value='Search' />
         </form>
     </div>
-    <% recipeHits.forEach(function(hit) { %>
+    <% if (typeof recipeHits === 'object') {recipeHits.forEach(function(hit) { %>
         <div class='polaroid single index'>
             <div class='polaroid_photo'>
                 <img src='<%= hit.recipe.image %>' alt='<%= hit.recipe.label %> dish'>
@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-    <% }) %>
+    <% })} %>
     <h2 class='title'><%= message %></h2>
     <img class='attribution' src='../static/images/Edamam_logo.png' alt='Edamam Logo'>
     <a class='button' id='topButton' href='#top'>Back To Top</a>
