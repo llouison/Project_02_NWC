@@ -52,18 +52,24 @@ controller.create = (req, res) => {
 
 // defining the view to render once the edit recipe promise is complete
 controller.edit = (req, res) => {
-    Recipe.findById(req.params.id)
-    .then(recipe => {
-        console.log(recipe.photo);
-        res.render('recipes/recipes-edit', {
-            documentTitle: 'Now We\'re Cookin\' - Edit',
-            recipe: recipe,
-            id: req.params.id,
+    if (req.user !== undefined) {
+        Recipe.findById(req.params.id)
+        .then(recipe => {
+            console.log(recipe.photo);
+            res.render('recipes/recipes-edit', {
+                documentTitle: 'Now We\'re Cookin\' - Edit',
+                recipe: recipe,
+                id: req.params.id,
+                username: req.user.username,
+            });
+        })
+        .catch(err => {
+            res.status(400).json(err);
         });
-    })
-    .catch(err => {
-        res.status(400).json(err);
-    });
+    }
+    else {
+        res.redirect('/auth/register');
+    }
 };
 
 // defining the view to render once the update recipe promise is complete
@@ -87,13 +93,18 @@ controller.update = (req, res) => {
 
 // defining the view to render once the delete promise is complete
 controller.destroy = (req, res) => {
-    Recipe.destroy(req.params.id)
-    .then(() => {
-        res.redirect('/recipes');
-    })
-    .catch(err => {
-        res.status(400).json(err);
-    });
+    if ((req.user !== undefined) && (req.user.username === 'admin')) {
+        Recipe.destroy(req.params.id)
+        .then(() => {
+            res.redirect('/recipes');
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+    }
+    else {
+        res.redirect('/auth/register');
+    }      
 };
 
 //exporting the controller
