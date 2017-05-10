@@ -7,7 +7,13 @@ const APP_ID = process.env.APPLICATION_ID;
 const API_KEY = process.env.API_SECRET_KEY;
 
 function getRecipe(req, res, next) {
-  fetch(`https://api.edamam.com/search?q=fish&app_id=${APP_ID}&app_key=${API_KEY}`)
+  // console.log('body', req.query.search)
+  if(!req.query.search){
+    res.locals.recipeHits = 'Sorry, nothing found';
+    return next();
+  }
+  console.log('i am fetching')
+  fetch(`https://api.edamam.com/search?q=${req.query.search}&app_id=${APP_ID}&app_key=${API_KEY}`)
     .then((fetchRes) => {
       return fetchRes.json();
     }).then((jsonFetchRes) => {
