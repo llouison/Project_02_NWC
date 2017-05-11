@@ -117,6 +117,7 @@ submitButton.addEventListener('click', (event) => {
 1. Run `npm install` to install all necessary dependencies listed in the package.json
 2. Run all the migration files (un-comment the connect to database lines first) `psql -f migration_date.sql` in ascending order to create and alter the tables. Change the date in the snippet accordingly. 
 3. Run the seed file (un-comment the connect to database lines first) `psql -f seed.sql` to populate the tables.
+4. Create a `.env` file in the root. You'll need to have an app id and api key for the Edamam API and a secret key for passwords. 
 4. To launch the app locally run `npm run dev` and navigate to __localhost:3000__ in your browser.
 
 ## Unsolved Problems/Next Steps
