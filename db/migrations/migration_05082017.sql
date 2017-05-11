@@ -1,5 +1,5 @@
 -- connecting to the recipe development database
-\connect recipe_development
+-- \connect recipe_development
 
 -- creating the users tables in the recipe development database
 
