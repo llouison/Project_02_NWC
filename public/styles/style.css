@@ -26,6 +26,9 @@ nav, li {
     font-size: 20px;
     list-style: none;
 }
+li {
+    margin: 0 10px;
+}
 .logo {
     flex: 2;
     font-size: 23px;
