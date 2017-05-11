@@ -29,7 +29,7 @@ router.post('/register', controller.create);
 router.post(
   '/login',
   passport.authenticate('local', {
-    successRedirect: '/user',
+    successRedirect: '/recipes',
     failureRedirect: '/auth/login',
     failureFlash: false,
   })
