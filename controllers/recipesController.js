@@ -20,6 +20,7 @@ controller.index = (req, res) => {
 
 // defining the view to render once the findbyid promise is complete
 controller.show = (req, res) => {
+    // console.log(req.params);
     Recipe.findById(req.params.id)
     .then(recipe => {
         res.render('recipes/recipes-single', {

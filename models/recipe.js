@@ -6,12 +6,12 @@ const Recipe = {};
 
 // creating the findall method
 Recipe.findAll = () => {
-    return db.query('SELECT * FROM recipes JOIN categories ON recipes.category_type = categories.id ORDER BY recipes.id DESC');
+    return db.query('SELECT recipes.id, recipes.title, categories.category_type, recipes.photo FROM recipes JOIN categories ON recipes.category_type = categories.id ORDER BY recipes.id DESC');
 };
 
 // creating the findbyid method
 Recipe.findById = id => {
-    return db.oneOrNone('SELECT * FROM recipes JOIN categories ON recipes.category_type = categories.id WHERE recipes.id = $1', [id]);
+    return db.oneOrNone('SELECT recipes.id, recipes.title, recipes.author, recipes.description, categories.category_type, recipes.ingredients, recipes.photo FROM recipes JOIN categories ON recipes.category_type = categories.id WHERE recipes.id = $1', [id]);
 };
 
 // creating the create new recipe method
