@@ -22,10 +22,6 @@
                 <h2 class='tertiary'>Category: <%= recipe.category_type %></h2>
                 <div class='button_container'>
                     <a class='button black' href='/recipes/<%= recipe.id %>'>Info</a>
-                    <a class='button black' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
-                    <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
-                        <input type='submit' class='button black' value='Delete' />
-                    </form>
                 </div>
             </div>
         </div>
