@@ -358,6 +358,7 @@ footer a {
 .polaroid_content {
     height: 25vw;
     width: 50vw;
+    margin-bottom: 10px;
 }
 .index {
     filter: none;
@@ -384,7 +385,7 @@ footer a {
     display: inline-block;
 }
 .black {
-    padding: 2px 5px;
+    padding: 0 5px;
 }
 #topButton {
     width: 40px;
