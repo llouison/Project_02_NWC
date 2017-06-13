@@ -116,9 +116,9 @@ submitButton.addEventListener('click', (event) => {
 
 1. Run `npm install` to install all necessary dependencies listed in the package.json
 2. In psql run `create database recipe_development` 
-2. Run all the migration files (un-comment the connect to database lines first) `psql -f migration_06032017.sql` to create the users, categories, and recipes tables.
+2. Un-comment the connect to database line, then run `psql -f migration_06032017.sql` in the migrations folder in db of the root to create the users, categories, and recipes tables.
 3. Run the seed file (un-comment the connect to database lines first) `psql -f seed.sql` to populate the tables.
-4. Create a `.env` file in the root. You'll need to have an `APPLICATION_ID` and `API_SECRET_KEY` for the Edamam API and a `SECRET_KEY` for user authentication. 
+4. Create a `.env` file in the root. You'll need to have an `APPLICATION_ID` and `API_SECRET_KEY` for the [Edamam API](https://developer.edamam.com/edamam-recipe-api) and a `SECRET_KEY` for user authentication. 
 4. To launch the app locally run `npm run dev` and navigate to __localhost:3000__ in your browser.
 
 ## Unsolved Problems/Next Steps
